@@ -28,7 +28,6 @@ SRC_FILES = ft_aa_main.c \
 			ft_inpt_abort.c \
 			ft_is_list_order.c \
 			ft_launcher.c \
-			ft_make_list.c \
 			ft_max.c \
 			ft_min.c \
 			ft_next_big.c \
@@ -37,11 +36,9 @@ SRC_FILES = ft_aa_main.c \
 			ft_print_array.c \
 			ft_pusha.c \
 			ft_pushb.c \
-			ft_random_list.c \
 			ft_rev_rotate.c \
 			ft_rotate.c \
 			ft_rr_moves.c \
-			ft_shuffle.c \
 			ft_swap.c \
 			ft_turk_sort.c \
 			ft_write_inst.c
@@ -56,7 +53,7 @@ $(LIBFT_LIB):
 $(PROGRAM): $(OBJ_FILES) $(LIBFT_LIB) $(PRINTF_LIB)
 	$(CC) $(CCFLAGS) $(OBJ_FILES) $(LIBFT_LIB) $(PRINTF_LIB) -o $(PROGRAM)
 
-%.o: %.c
+$(OBJ_DIR)/%.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:

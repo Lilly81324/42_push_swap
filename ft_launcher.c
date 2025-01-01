@@ -14,6 +14,7 @@
 
 // launches the different sorting algorithms based on the length
 // of the list
+// add "ft_print_array(lst->a, lst->la)" for visual at start and end
 void	ft_launcher(t_lst *lst)
 {
 	t_instru	instru;

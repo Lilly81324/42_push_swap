@@ -44,6 +44,7 @@ void	ft_inpt_abort(char **array);
 int		ft_atoi_check_one(char *nptr);
 int		ft_atoi_check_two(const char *nptr, int i, int fac);
 t_lst	*ft_prepare_lst(char **raw);
+void	ft_print_array(int	*array, int length);
 
 // writing instruction
 void	ft_write_inst(char *input, t_instru *instru);
@@ -77,10 +78,5 @@ void	ft_case_two(t_lst *lst, t_instru *instru, int *cross);
 void	ft_case_three(t_lst *lst, t_instru *instru, int *cross);
 int		ft_min(int a, int b);
 int		ft_max(int a, int b);
-
-// for debugging
-int		*ft_make_list(int len);
-int		*ft_shuffle(int *list, int length);
-t_lst	*ft_random_list(int len);
 
 #endif

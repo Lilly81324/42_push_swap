@@ -12,6 +12,7 @@
 
 #include "sorting.h"
 
+// Displays array of length on stdout
 void	ft_print_array(int	*array, int length)
 {
 	int	i;
