@@ -26,7 +26,7 @@ int	main(int argc, char *argv[])
 	if (ft_check_input(raw) == 0)
 	{
 		ft_inpt_abort(raw);
-		ft_printf("Error\n");
+		write(STDERR_FILENO, "Error\n", (6 * sizeof(char)));
 		return (0);
 	}
 	lst = ft_prepare_lst(raw);
