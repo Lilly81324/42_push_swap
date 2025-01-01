@@ -20,8 +20,8 @@ void	ft_print_array(int	*array, int length)
 	i = 0;
 	while (i < length)
 	{
-		printf("%d, ", array[i]);
+		ft_printf("%d, ", array[i]);
 		i++;
 	}
-	printf("\n");
+	ft_printf("\n");
 }

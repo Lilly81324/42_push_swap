@@ -22,6 +22,8 @@
 # include "./libft/libft.h"
 # include "./libft/ft_printf/ft_printf.h"
 
+// stores list a in a and the length of that list in la
+// same for b with a->b
 typedef struct s_lst
 {
 	int	*a;
@@ -30,6 +32,10 @@ typedef struct s_lst
 	int	lb;
 }	t_lst;
 
+// used to hold the instructions to sort the list
+// instructions keeps the string of instructions
+// head counts the position where we currently are (for writing)
+// inst_count counts how many instructions were written (unneccesary)
 typedef struct s_instru
 {
 	char	*instructions;
@@ -37,16 +43,18 @@ typedef struct s_instru
 	int		inst_count;
 }	t_instru;
 
-void	ft_launcher(t_lst *lst);
-int		ft_is_list_order(int *list, int len);
+// for checking the input
 int		ft_check_input(char **input);
-void	ft_inpt_abort(char **array);
 int		ft_atoi_check_one(char *nptr);
 int		ft_atoi_check_two(const char *nptr, int i, int fac);
-t_lst	*ft_prepare_lst(char **raw);
-void	ft_print_array(int	*array, int length);
+void	ft_inpt_abort(char **array);
 
-// writing instruction
+// for starting the launcher
+t_lst	*ft_prepare_lst(char **raw);
+void	ft_launcher(t_lst *lst);
+int		ft_is_list_order(int *list, int len);
+
+// writing instructions
 void	ft_write_inst(char *input, t_instru *instru);
 void	ft_swap(int *list, t_instru *instru, char which);
 void	ft_rotate(int *list, int len, t_instru *instru, char which);
@@ -78,5 +86,8 @@ void	ft_case_two(t_lst *lst, t_instru *instru, int *cross);
 void	ft_case_three(t_lst *lst, t_instru *instru, int *cross);
 int		ft_min(int a, int b);
 int		ft_max(int a, int b);
+
+// for debugging
+void	ft_print_array(int	*array, int length);
 
 #endif
