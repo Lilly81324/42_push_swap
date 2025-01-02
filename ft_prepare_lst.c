@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 15:38:30 by sikunne           #+#    #+#             */
-/*   Updated: 2024/12/31 16:57:12 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/01/02 16:44:12 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ t_lst	*ft_prepare_lst(char **raw)
 		lst->a[i] = ft_atoi(raw[i]);
 		i++;
 	}
-	ft_inpt_abort(raw);
 	return (lst);
 }
