@@ -18,16 +18,16 @@
 // at least one number is bigger
 int	ft_next_big(int *list, int len, int min)
 {
-	int				i;
-	int				current;
-	long long int	smallest;
+	int	i;
+	int	current;
+	int	smallest;
 
 	i = 0;
 	current = 0;
-	smallest = 2147483650;
+	smallest = 2147483647;
 	while (i < len)
 	{
-		if (list[i] < smallest && list[i] >= min)
+		if (list[i] <= smallest && list[i] >= min)
 		{
 			smallest = list[i];
 			current = i;

@@ -16,16 +16,16 @@
 // in list that is still smaller than max
 int	ft_next_smal(int *list, int len, int max)
 {
-	int				i;
-	int				current;
-	long long int	biggest;
+	int	i;
+	int	current;
+	int	biggest;
 
 	i = 0;
 	current = 0;
-	biggest = -2147483650;
+	biggest = -2147483648;
 	while (i < len)
 	{
-		if (list[i] > biggest && list[i] <= max)
+		if (list[i] >= biggest && list[i] <= max)
 		{
 			biggest = list[i];
 			current = i;
