@@ -19,7 +19,7 @@ void	ft_launcher(t_lst *lst)
 {
 	t_instru	instru;
 
-	instru.instructions = (char *)ft_calloc(200000, sizeof(char));
+	instru.instructions = (char *)ft_calloc(400000, sizeof(char));
 	instru.head = 0;
 	instru.inst_count = 0;
 	if (lst->la < 2 || ft_is_list_order(lst->a, lst->la) == 1)

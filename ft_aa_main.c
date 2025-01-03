@@ -29,6 +29,7 @@ static char	**copy_argv(int argc, char *argv[])
 	return (copy);
 }
 
+// programm can handle up to 500 elements before slowing down
 // main function that checks for error is input
 // and launches the programm after making the lst obj
 int	main(int argc, char *argv[])
@@ -51,6 +52,7 @@ int	main(int argc, char *argv[])
 	}
 	lst = ft_prepare_lst(raw);
 	ft_launcher(lst);
+	ft_inpt_abort(raw);
 	free(lst->a);
 	free(lst->b);
 	free(lst);
