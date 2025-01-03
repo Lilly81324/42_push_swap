@@ -3,8 +3,6 @@ CCFLAGS = -Wall -Wextra -Werror
 
 LIBFT_DIR = ./libft
 LIBFT_LIB = $(LIBFT_DIR)/libft.a
-PRINTF_DIR = ./libft/ft_printf
-PRINTF_LIB = $(PRINTF_DIR)/libftprintf.a
 SRC_FOLDER = src
 SRC_FILES = ft_aa_main.c \
 			ft_atoi_check_one.c \
@@ -50,8 +48,8 @@ all: $(LIBFT_LIB) $(PROGRAM)
 $(LIBFT_LIB):
 	make -C $(LIBFT_DIR)
 
-$(PROGRAM): $(OBJ_FILES) $(LIBFT_LIB) $(PRINTF_LIB)
-	$(CC) $(CCFLAGS) $(OBJ_FILES) $(LIBFT_LIB) $(PRINTF_LIB) -o $(PROGRAM)
+$(PROGRAM): $(OBJ_FILES) $(LIBFT_LIB)
+	$(CC) $(CCFLAGS) $(OBJ_FILES) $(LIBFT_LIB) -o $(PROGRAM)
 
 $(OBJ_DIR)/%.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@

@@ -20,7 +20,7 @@
 # include <limits.h>
 
 # include "./libft/libft.h"
-# include "./libft/ft_printf/ft_printf.h"
+# include "./libft/ft_printf.h"
 
 // stores list a in a and the length of that list in la
 // same for b with a->b
