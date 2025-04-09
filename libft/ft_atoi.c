@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:56:04 by sikunne           #+#    #+#             */
-/*   Updated: 2024/11/16 11:46:17 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/04/09 14:39:50 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_atoi(const char *nptr)
 	if (nptr == NULL)
 		return (*(volatile char *)nptr);
 	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t' \
-		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{

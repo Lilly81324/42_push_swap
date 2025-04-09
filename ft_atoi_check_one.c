@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 18:13:17 by sikunne           #+#    #+#             */
-/*   Updated: 2025/01/02 16:59:48 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/04/09 14:39:19 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_atoi_check_one(char *nptr)
 	if (nptr == NULL)
 		return (0);
 	while (nptr[i] == ' ' || nptr[i] == '\n' || nptr[i] == '\t' \
-		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{

@@ -17,26 +17,26 @@
 void	ft_brute_sort_base(t_lst *lst, t_instru *instru)
 {
 	if (lst->a[0] == lst->a[1] || \
-		lst->a[1] == lst->a[2] || \
-		lst->a[2] == lst->a[0])
+lst->a[1] == lst->a[2] || \
+lst->a[2] == lst->a[0])
 		ft_brute_sort_doubles(lst, instru);
 	else if (lst->a[0] < lst->a[1] && lst->a[1] > lst->a[2] && \
-			lst->a[0] < lst->a[2])
+lst->a[0] < lst->a[2])
 	{
 		ft_rev_rotate(lst->a, lst->la, instru, 'a');
 		ft_swap(lst->a, instru, 'a');
 	}
 	else if (lst->a[0] > lst->a[1] && lst->a[1] < lst->a[2] && \
-			lst->a[0] < lst->a[2])
+lst->a[0] < lst->a[2])
 		ft_swap(lst->a, instru, 'a');
 	else if (lst->a[0] < lst->a[1] && lst->a[1] > lst->a[2] && \
-			lst->a[0] > lst->a[2])
+lst->a[0] > lst->a[2])
 		ft_rev_rotate(lst->a, lst->la, instru, 'a');
 	else if (lst->a[0] > lst->a[1] && lst->a[1] < lst->a[2] && \
-			lst->a[0] > lst->a[2])
+lst->a[0] > lst->a[2])
 		ft_rotate(lst->a, lst->la, instru, 'a');
 	else if (lst->a[0] > lst->a[1] && lst->a[1] > lst->a[2] && \
-			lst->a[0] > lst->a[2])
+lst->a[0] > lst->a[2])
 	{
 		ft_rotate(lst->a, lst->la, instru, 'a');
 		ft_swap(lst->a, instru, 'a');
